@@ -1,18 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import './components/leftpanel'
-import LeftPanel from './components/leftpanel';
+
+import "./App.css";
+import LeftPanel from "./components/leftpanel";  // Correct import for LeftPanel
 
 function App() {
   return (
-    <div className="App">
-      <h1 class="text-3xl font-bold underline">
-      Hello world!
-      </h1>
-      <div className='left'>
-        <LeftPanel/>
-      </div>
-    </div>
+    <LeftPanel />
   );
 }
 
