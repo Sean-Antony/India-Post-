@@ -3,8 +3,13 @@ import './leftpanel.css';
 
 const LeftPanel = () => {
     return(
-        <div className='menu'>
-            
+        <div className='left-panel'>
+            <div className='menu'>
+
+            </div>
+            <div className='footer'>
+                
+            </div>
         </div>
     )
 }
