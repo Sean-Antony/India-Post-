@@ -1,6 +1,6 @@
 export default function FormExtra(){
     return(
-        <div className="flex items-center justify-between mr-[25px] ml-[25px]">
+        <div className="flex items-center justify-between">
         <div className="flex items-center ">
           <input
             id="remember-me"
@@ -14,8 +14,9 @@ export default function FormExtra(){
         </div>
 
         <div className="text-sm">
-          <a href="#" className="font-medium text-[#B01E1D]">
+          <a href="#" className="relative font-medium text-[#B01E1D] group">
             Forgot password?
+            <span className=" absolute left-1/2 bottom-[-8px] transform -translate-x-1/2 w-0 h-0.5 bg-[#B01E1D] group-hover:w-1/2 transition-all duration-300 ease-in-out"></span>
           </a>
         </div>
       </div>

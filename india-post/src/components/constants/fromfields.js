@@ -7,7 +7,7 @@ const loginFields=[
         type:"email",
         autoComplete:"email",
         isRequired:true,
-        placeholder:"India Post Office ID"   
+        placeholder:"Office ID"   
     },
     {
         labelText:"Password",
