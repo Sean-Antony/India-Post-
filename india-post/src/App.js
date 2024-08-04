@@ -6,21 +6,28 @@ import {
 } from "react-router-dom";
 import LoginPage from './components/pages/loginpage';
 import SignupPage from './components/pages/signuppage';
+import LoginLeftPanel from './components/LoginLeftPanel';
 
 function App() {
   return (
-    <div className="App">
-      <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <><LoginLeftPanel /><div className="App min-h-screen flex">
+      {/* Left Panel */}
+      <div className="w-1/3">
+
+      </div>
+
+      {/* Main Content */}
+      <div className="w-2/3 flex items-center justify-center">
         <div className="max-w-md w-full space-y-8">
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<LoginPage/>} />
-              <Route path="/signup" element={<SignupPage/>} />
+              <Route path="/" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
             </Routes>
           </BrowserRouter>
         </div>
       </div>
-    </div>
+    </div></>
   );
 }
 
