@@ -5,9 +5,8 @@ import CreateRoundedIcon from '@mui/icons-material/CreateRounded';
 
 function LeftPanel() {
   return (
-    <div className="flex min-h-screen">
-      {/* Left Panel */}
-      <div className="w-1/4 bg-[#B01E1D] text-white p-8 flex flex-col justify-between">
+    <div className="flex h-screen">
+      <div className="w-[500px] bg-[#B01E1D] text-white p-8 flex flex-col justify-between">
         <div className='flex flex-col justify-center'>
           <img src="path/to/your/logo.png" alt="India Post Logo" className="w-20 mb-8"/>
           <h1 className="text-2xl font-bold mb-4 text-center">Welcome to India Post</h1>
