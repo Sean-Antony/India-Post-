@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'PB': ['Poppins-Bold'],
+        'PSB': ['Poppins-SemiBold'],
+        'PM':  ['Poppins-Medium'],
+        'PR': ['Poppins-Regular']
+      },
+    },
   },
   plugins: [],
 }

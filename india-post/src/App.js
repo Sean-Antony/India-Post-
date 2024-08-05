@@ -1,9 +1,9 @@
-import Login from './pages/login';
+import Features from './pages/features.js';
 
 function App() {
   return(
   <div className='App'>
-    <Login />
+    <Features />
   </div>
   )
 }
