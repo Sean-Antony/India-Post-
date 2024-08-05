@@ -14,15 +14,15 @@ function LeftPanel() {
           <div className="space-y-8 mt-[40px]">
             <div className="flex flex-col   ">
              <p className='text-[14px] ml-[80px]'>STEP 1</p>
-              <span className='flex flex-row gap-x-4 ml-[40px] '><ExitToAppIcon/>Register/Login ID</span>
+              <span className='flex flex-row gap-x-4 ml-[40px] font-PSB'><ExitToAppIcon/>Register/Login ID</span>
             </div>
             <div className="flex flex-col  ">
             <p className='text-[14px] ml-[80px]'>STEP 2</p>
-              <span className='flex flex-row gap-x-4 ml-[40px]  '><EmailRoundedIcon/>Choose your services</span>
+              <span className='flex flex-row gap-x-4 ml-[40px] font-PSB '><EmailRoundedIcon/>Choose your services</span>
             </div>
             <div className="flex flex-col  ">
             <p className='text-[14px] ml-[80px]'>STEP 3</p>
-              <span className='flex flex-row gap-x-4 ml-[40px] '><CreateRoundedIcon/>Instructions and Features</span>
+              <span className='flex flex-row gap-x-4 ml-[40px] font-PSB'><CreateRoundedIcon/>Instructions and Features</span>
             </div>
           </div>
         </div>

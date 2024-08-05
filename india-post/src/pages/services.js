@@ -14,7 +14,7 @@ function Services(){
             <LeftPanel/>
           </div>
           <div className='flex-1 flex flex-col'>
-            <div className='flex items-center justify-between p-4 mt-[20px] mr-[70px] ml-[70px]'>
+            <div className='flex items-center justify-between p-4 mt-[10px] mr-[70px] ml-[70px]'>
               <img 
                 src={logo}
                 alt='India Post Logo' 
