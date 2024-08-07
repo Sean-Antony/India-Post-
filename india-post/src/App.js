@@ -1,10 +1,17 @@
-import Features from './pages/features.js';
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/login';
+import Services from './pages/services';
+import Features from './pages/features';
+import Home from './pages/home';
 
 function App() {
   return(
-  <div className='App'>
-    <Features />
-  </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/features" element={<Features />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   )
 }
 

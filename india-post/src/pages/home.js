@@ -1,5 +1,5 @@
 import React from "react";
-import LeftPanel from "../leftpanel.js";
+import LeftPanel from "../components/leftpanel";
 import SearchIcon from "@mui/icons-material/Search";
 import FormatListBulletedRoundedIcon from "@mui/icons-material/FormatListBulletedRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
@@ -77,7 +77,7 @@ const Home = () => {
             <span>22 Mar 2024</span>
             <ArrowDropDownRoundedIcon className="ml-2" />
           </button>
-          <button className="w-[150px] h-[40px]  rounded-lg flex text-white items-center justify-center text-[13px] font-bold bg-[#B01E1D]">
+          <button className="w-[150px] h-[40px]  rounded-lg flex text-white items-center justify-center text-[13px] font-bold bg-k1">
             <AddBoxRoundedIcon className="mr-2 text-white" />
             <span>Create Bag</span>
           </button>
@@ -100,7 +100,7 @@ const Home = () => {
           </div>
           <div className="w-[520px] mt-[20px] h-px bg-gray-300"></div>
           <div className="w-full text-left flex justify-start">
-            <span className="w-[40px] h-[40px] bg-[#B01E1D] rounded-md mr-2 ml-[15px] mt-[15px] flex justify-center items-center">
+            <span className="w-[40px] h-[40px] bg-k1 rounded-md mr-2 ml-[15px] mt-[15px] flex justify-center items-center">
               <InfoRoundedIcon className="text-white" fontSize="large" />
             </span>
             <div className="ml-[5px]">

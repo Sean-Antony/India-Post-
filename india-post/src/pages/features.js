@@ -1,12 +1,11 @@
 import React from 'react';
 import LeftPanel from '../components/LoginLeftPanel';
+import Card from '../components/card';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import ErrorRoundedIcon from '@mui/icons-material/ErrorRounded';
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 import MailRoundedIcon from '@mui/icons-material/MailRounded';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import { GoDotFill } from "react-icons/go";
 import LanguageIcon from '@mui/icons-material/Language';
 import ArticleIcon from '@mui/icons-material/Article';
 import CreditCardRoundedIcon from '@mui/icons-material/CreditCardRounded';
@@ -18,40 +17,38 @@ import logo from '../assets/logo.png';
 
 const Features = () => {
   return (
-    <div className='bg-[#F7F7F9] flex'>
-          <div className='flex flex-col'>
-            <LeftPanel/>
-          </div>
-          <div className='flex-1 flex flex-col'>
-            <div className='flex items-center justify-between p-4 mt-[10px] mr-[80px] ml-[70px]'>
-              <img 
-                src={logo}
-                alt='India Post Logo' 
-                className='h-[100px] w-auto'
-              />
-              <div className='flex space-x-4'>
-                <button type="button" className="border border-[#B01E1D] bg-[#F7F7F9] text-black font-PSB py-3 px-5 rounded-md flex items-center">
-                  <ErrorRoundedIcon className='mr-2' />
-                  Quick Access
-                </button>
-                <button type="button" className="border border-[#B01E1D] bg-[#F7F7F9] text-black font-PSB py-3 px-5 rounded-md flex items-center">
-                  <HelpRoundedIcon className='mr-2' />
-                  Contact Help
-                </button>
-                <div className='flex justify-center'>
-                  <div className='h-[50px] w-px bg-gray-300'></div>
-                </div>
-                <button type="button" className='border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center'>
-                <BiSolidMessageDots className='text-[25px] text-gray-400'/>
-                </button>
-                <button type="button" className='border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center'>
-                <FaBell className='text-[25px] text-gray-400'/>
-                </button>
+    <div className='flex flex-col lg:flex-row min-h-screen bg-[#F7F7F9]'>
+      <LeftPanel/>
+      <div className='flex-1 flex flex-col xl:mx-3'>
+        <header className="flex items-center justify-between p-4 lg:mx-16 xl:mr-[80px]">
+          <img 
+            src={logo}
+            alt='India Post Logo' 
+            className='h-[100px] w-auto'
+          />
+          <div className='flex space-x-4'>
+            <button type="button" className="border border-k1 bg-[#F7F7F9] text-black font-bold py-2 px-4 rounded-md flex items-center">
+              <ErrorRoundedIcon className='mr-2 text-k1' />
+               Quick Access
+            </button>
+            <button type="button" className="border border-k1 bg-[#F7F7F9] text-black font-bold py-2 px-4 rounded-md flex items-center">
+              <HelpRoundedIcon className='mr-2 text-k1' />
+              Contact Help
+            </button>
+              <div className='flex justify-center'>
+                <div className='h-[50px] w-px bg-gray-300'></div>
               </div>
-            </div>
-            <div className='flex justify-center'>
-                  <div className='h-px w-[1200px] bg-gray-300 mb-[30px]'></div>
-            </div>
+              <button type="button" className='border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center'>
+                <BiSolidMessageDots className='text-[25px] text-gray-400'/>
+              </button>
+              <button type="button" className='border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center'>
+                <FaBell className='text-[25px] text-gray-400'/>
+              </button>
+          </div>
+        </header>
+        <div className='flex justify-center '>
+          <div className='h-px w-[1200px] bg-gray-300 mb-[30px]'></div>
+        </div>
             <div className='flex flex-col justify-between px-[90px] space-y-4'>
               <h2 className='font-PB text-lg '>Welcome Back, Samvith</h2>
               <div className='flex flex-row justify-between'>
@@ -127,159 +124,57 @@ const Features = () => {
               </button>
               </div>
             </div>
-            <div className='grid grid-cols-3 gap-4 ml-[90px] mr-[70px] '>
-              <div className='mb-2'>
-                <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#B01E1D]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#B01E1D] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <MailRoundedIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>Mail</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px]'>Effortlessly send and recieve mail seamless tracking and delivery</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-              <div>
-              <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#FCA61F]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#FCA61F] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <LanguageIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>International Mail</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px]'>Expand your reach globally with secure international mail services</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-              <div>
-              <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#7288FF]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#7288FF] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <ArticleIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>Finance & Insurance</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px]'>Manage your finances and protect your shipment with ease</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-              <div>
-              <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#bf6ef1]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#bf6ef1] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <CreditCardRoundedIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>E-Payments</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px] mr-[20px]'>Conviniently handle payments for postage and other services online</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-              <div>
-              <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#6cedc4]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#6cedc4] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <TimelineRoundedIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>Product Sales</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px]'>Explore a wide range of postal products and services tailored to your needs</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-              <div>
-              <card className='flex h-[180px] w-[375px] border border-gray-300 bg-white rounded-md'>
-                  <span className='w-[5px] bg-[#8a76fc]'></span>
-                  <div className='flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                  <div className=" h-[40px] w-[40px] bg-[#8a76fc] p-2 rounded-md ml-[20px] mt-[20px] flex justify-center"> 
-                    <FileCopyRoundedIcon className="text-white" fontSize="medium" /> 
-                  </div>
-                  <div className='h-[35px] w-[90px] bg-[#C5FFF4] rounded-[70px] mt-[20px] ml-[140px] flex justify-center items-center'>
-                    <GoDotFill className='text-lg text-[#0F5133] mr-[3px]'/>
-                    <h3 className='font-PSB text-sm text-[#0F5133]'>Active</h3>
-                  </div>
-                  <button className='h-[40px] w-[40px] border border-[#F7F7F9] bg-[#F7F7F9] mt-[18px] ml-[20px] mr-[20px] rounded-md'>
-                    <ArrowOutwardIcon className='mt-[-3px]'/>
-                  </button>
-                  </div>
-                  <div className='ml-[20px] mt-[15px] mb-[5px]'>
-                    <h2 className='font-PB text-lg'>Compare & Book</h2>
-                  </div>
-                  <div>
-                    <h3 className='text-sm text-gray-400 font-PSB ml-[20px]'>Find the best postal services for your requirements and book with confidence</h3>
-                  </div>
-                  </div>
-                </card>
-              </div>
-            </div>
+            <div className='grid grid-cols-3 gap-4 ml-[90px] mr-[70px]'>
+          <div className='mb-2'>
+          <Card
+            icon={MailRoundedIcon}
+            bgColor="bg-[#B01E1D]"
+            title="Mail"
+            description="Effortlessly send and receive mail with seamless tracking and delivery."
+          />
+        </div>
+        <div className='mb-2'>
+          <Card
+            icon={LanguageIcon}
+            bgColor="bg-[#FCA61F]"
+            title="International Mail"
+            description="Expand your reach globally with secure international mail services."
+            />
+        </div>
+        <div className='mb-2'>
+          <Card
+            icon={ArticleIcon}
+            bgColor="bg-[#7288FF]"
+            title="Finance & Insurance"
+            description="Manage your finances and protect your shipment with ease."
+          />
+        </div>
+        <div className='mb-2'>
+          <Card
+            icon={CreditCardRoundedIcon}
+            bgColor="bg-[#bf6ef1]"
+            title="E-Payments"
+            description="Conveniently handle payments for postage and other services online."
+          />
+        </div>
+        <div className='mb-2'>
+          <Card
+            icon={TimelineRoundedIcon}
+            bgColor="bg-[#6cedc4]"
+            title="Product Sales"
+            description="Explore a wide range of postal products and services tailored to your needs."
+          />
+        </div>
+        <div className='mb-2'>
+          <Card
+            icon={FileCopyRoundedIcon}
+            bgColor="bg-[#8a76fc]"
+            title="Compare & Book"
+            description="Find the best postal services for your requirements and book with confidence."
+          />
           </div>
+        </div>
+      </div>
     </div>
   )
 }
