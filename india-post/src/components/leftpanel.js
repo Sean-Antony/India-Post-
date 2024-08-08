@@ -10,7 +10,7 @@ import HelpIcon from "@mui/icons-material/Help";
 
 const LeftPanel = () => {
   return (
-    <div className="h-screen w-2/12 bg-[#B01E1D] flex ">
+    <div className="h-screen w-1/6 bg-k1 flex ">
       <div className="flex flex-col">
         <ul className="space-y-2 mt-[100px] ml-[40px] text-[14px] font-bold">
           <div className="flex items-center">
