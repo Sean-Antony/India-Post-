@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LeftPanel from '../components/LoginLeftPanel';
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
@@ -14,9 +14,11 @@ function Services() {
   const handleProceed = () => {
     navigate('/features');
   };
+  
+  const [currentStep, setCurrentStep] = useState(1);
   return (
     <div className='bg-[#F7F7F9] flex flex-col lg:flex-row min-h-screen'>
-      <LeftPanel />
+      <LeftPanel currentStep={currentStep}/>
       <div className='flex-1 flex flex-col'>
         <header className="flex items-center justify-between p-4 lg:mx-16 xl:mx-12">
           <img 

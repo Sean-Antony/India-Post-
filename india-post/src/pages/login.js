@@ -28,10 +28,12 @@ function Login() {
         console.log(formData);
         navigate('/services');
     };
+    
+    const [currentStep, setCurrentStep] = useState(0);
   
     return (
         <div className="flex flex-col lg:flex-row min-h-screen bg-[#F7F7F9]">
-            <LeftPanel />
+            <LeftPanel currentStep={currentStep}/>
             <div className="flex-1 flex flex-col">
                 <header className="flex items-center justify-between p-4 lg:mx-16 xl:mx-12">
                     <img 
@@ -84,9 +86,9 @@ function Login() {
                                             type="text"
                                             name="email"
                                             placeholder="Office ID"
-                                            value={formData.email}
+                                            value={formData.id}
                                             onChange={handleChange}
-                                            className="border rounded-md pl-10 p-4 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
+                                            className="border rounded-md pl-10 p-4 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10 font-PSB text-gray-400"
                                         />
                                     </div>
                                 </div>
@@ -104,7 +106,7 @@ function Login() {
                                             placeholder="Password"
                                             value={formData.password}
                                             onChange={handleChange}
-                                            className="border rounded-md pl-10 p-4 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
+                                            className="border rounded-md pl-10 p-4 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10 font-PSB text-gray-400"
                                         />
                                     </div>
                                 </div>

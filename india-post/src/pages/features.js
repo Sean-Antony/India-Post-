@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LeftPanel from '../components/LoginLeftPanel';
 import Card from '../components/card';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
@@ -16,9 +16,12 @@ import { FaBell } from "react-icons/fa";
 import logo from '../assets/logo.png';
 
 const Features = () => {
+  
+  const [currentStep, setCurrentStep] = useState(2);
+  
   return (
     <div className='flex flex-col lg:flex-row min-h-screen bg-[#F7F7F9]'>
-      <LeftPanel/>
+      <LeftPanel currentStep={currentStep}/>
       <div className='flex-1 flex flex-col xl:mx-3'>
         <header className="flex items-center justify-between p-4 lg:mx-16 xl:mr-[80px]">
           <img 
