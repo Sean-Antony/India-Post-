@@ -1,5 +1,5 @@
 import Features from './pages/features.js';
-import Home from './components/pages/home.js';
+import Home from './pages/home.js'
 
 function App() {
   return(
