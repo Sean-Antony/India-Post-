@@ -1,0 +1,153 @@
+[33mcommit 608ef0693c4d8f85d50bd609bb8aa280a094c929[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31mupstream/main[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Tue Aug 6 01:59:33 2024 +0530
+
+    services page added
+
+[33mcommit 8428a2f84711f06cb2110f9ec3b0806645c68398[m
+Merge: d94b7b4 e1172c5
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Mon Aug 5 15:40:35 2024 +0530
+
+    services page and features page added
+
+[33mcommit d94b7b45631d1448c40887143d3752469cdb8fad[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Mon Aug 5 15:37:27 2024 +0530
+
+    services page and features page added
+
+[33mcommit e1172c591472edf7ef2cd72016e2b6ec90aeac57[m
+Merge: 5f73bef 6cd4685
+Author: Figo Fernandez <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Mon Aug 5 15:30:52 2024 +0530
+
+    Merge pull request #4 from FernandezFigo105/main
+    
+    Home page and tailwind config changed
+
+[33mcommit 6cd46851e5070fc49e015e32f1762f5360b37963[m
+Merge: e29249f 5f73bef
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Mon Aug 5 16:08:22 2024 +0530
+
+    Merge branch 'main' of https://github.com/FernandezFigo105/India-Post-
+
+[33mcommit e29249f131c4e4ca52df1b80dd9f7b8555b3880e[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Mon Aug 5 16:05:34 2024 +0530
+
+    Tailwind config and Home page changed
+
+[33mcommit 5f73bef3bf7465e431f7ac2fba5d7e56d8b8697b[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sun Aug 4 22:23:42 2024 +0530
+
+    login page 1 added
+
+[33mcommit 226b11aa933c22bf6b7bc27ebc92b90677d5671b[m
+Merge: 56d868c 6288e9b
+Author: Figo Fernandez <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sun Aug 4 15:22:58 2024 +0530
+
+    Merge pull request #3 from FernandezFigo105/main
+    
+    LoginLeftPanel added
+
+[33mcommit 6288e9b39d3557a9c57e87f0de41a73e982bebc8[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sun Aug 4 15:21:45 2024 +0530
+
+    LoginLeftPanel added
+
+[33mcommit 56d868c068c80e9400bf14b7e3ff6be5ae76fb77[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sun Aug 4 03:58:49 2024 +0530
+
+    login page halfway
+
+[33mcommit 9652855fa7c9468c376ddfef8e6eb168c52bdab0[m
+Merge: 8005233 7574b40
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 19:47:49 2024 +0530
+
+    Merge branch 'main' of https://github.com/Sean-Antony/India-Post-
+
+[33mcommit 800523327c5aa5fb83328cdb3bdf2a7c57d6e142[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 19:42:34 2024 +0530
+
+    login page 1
+
+[33mcommit 7574b40a778e234abb868f1ab52c09ffc3624e8f[m
+Merge: 3691040 800b73e
+Author: Figo Fernandez <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 19:41:14 2024 +0530
+
+    Merge pull request #2 from FernandezFigo105/main
+    
+    left panel home
+
+[33mcommit 800b73ebc3b14cc28d0598a7b929e198a40aa5c4[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 19:39:01 2024 +0530
+
+    left panel home
+
+[33mcommit 36910409a53c5fee5ca25f043d7f81f87483e70a[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 14:52:52 2024 +0530
+
+    left panel update
+
+[33mcommit a016e285330214d31cc5cf49ad6e092ee66a827f[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 14:44:04 2024 +0530
+
+    tailwind
+
+[33mcommit 0d2fc522fd034fe302d808c6cdfe0022683adb3b[m
+Merge: 374fc2d c59d767
+Author: Figo Fernandez <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 14:32:09 2024 +0530
+
+    Merge pull request #1 from FernandezFigo105/main
+    
+    Tailwind Added
+
+[33mcommit c59d767b93da769fb8ff2bc5f2e16997940a3aff[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 14:30:58 2024 +0530
+
+    tailwind added
+
+[33mcommit efcdfee1ae2f86a04d3c2de4aca1147ef394150d[m
+Merge: 0f2ecf6 374fc2d
+Author: Figo Fernandez <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 14:19:48 2024 +0530
+
+    Merge branch 'Sean-Antony:main' into main
+
+[33mcommit 0f2ecf639314637c75abe9bdb9aef33388f8b748[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 14:18:18 2024 +0530
+
+    tailwind added
+
+[33mcommit 69f8dc4209bb483c10eb9b811605524315a7b1dd[m
+Author: FernandezFigo105 <110619874+FernandezFigo105@users.noreply.github.com>
+Date:   Sat Aug 3 13:47:50 2024 +0530
+
+    Tailwind Added
+
+[33mcommit 374fc2d60dc968d148a1a59fb8994ea6d2c2a9e3[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 13:29:33 2024 +0530
+
+    tailwind
+
+[33mcommit 1fcbe657fb6aeba18baa6ce85228b8f44042afc0[m
+Author: Sean Antony <seanantonyjr11@gmail.com>
+Date:   Sat Aug 3 13:14:09 2024 +0530
+
+    first commit
