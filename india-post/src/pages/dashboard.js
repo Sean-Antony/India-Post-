@@ -2,7 +2,10 @@ import React from 'react'
 import LeftPanel from '../components/leftpanel';
 import TextsmsRoundedIcon from '@mui/icons-material/TextsmsRounded';
 import ErrorRoundedIcon from '@mui/icons-material/ErrorRounded';
+import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
+import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import { FaBell } from "react-icons/fa";
+import logo from '../assets/logo.png';
 
 function Dashboard() {
   return (
@@ -33,7 +36,7 @@ function Dashboard() {
             <div className="h-[50px] w-px bg-gray-300"></div>
           </div>
           <button type="button" className="border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center">
-            <BiSolidMessageDots className="text-[25px] text-gray-400" />
+            <TextsmsRoundedIcon className="text-[25px] text-gray-400" />
           </button>
           <button type="button" className="border border-gray-300 bg-white py-3 px-3 rounded-md flex items-center">
             <FaBell className="text-[25px] text-gray-400" />

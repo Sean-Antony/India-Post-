@@ -28,7 +28,7 @@ function LeftPanel({currentStep}) {
         <div className="flex flex-col items-center mb-8">
           <img src="logo.png" alt="India Post Logo" className="w-20 mb-4" />
           <h1 className="text-xl md:text-2xl font-bold mb-4 text-center">Welcome to India Post</h1>
-          <p className="text-sm md:text-base mb-8 md:mb-24 lg:mb-32 xl:mb-40 text-center">
+          <p className="text-sm md:text-base mb-8 xl:mb-24 2xl:mb-40 text-center">
             You are just a few steps away from <br /> accessing the India Post system.
           </p>
           <div className="space-y-6 md:space-y-8">
@@ -51,7 +51,7 @@ function LeftPanel({currentStep}) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col align-left mb-2 mt-[250px]">
+        <div className="flex flex-col align-left mb-2 xl:mt-[100px] 2xl:mt-[250px]">
           <p className="text-sm md:text-sm font-PM opacity-70 mb-2">New Updates available! v_4.9.3</p>
           <h3 className="text-sm md:text-sm py-1 font-PSB">Update Now</h3>
         </div>

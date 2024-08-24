@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ErrorRoundedIcon from "@mui/icons-material/ErrorRounded";
 import TextsmsRoundedIcon from "@mui/icons-material/TextsmsRounded";
 import NotificationImportantRoundedIcon from "@mui/icons-material/NotificationImportantRounded";
@@ -8,6 +9,11 @@ import { PiPackageFill } from "react-icons/pi";
 import { FaFile } from "react-icons/fa6";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleDash = () => {
+    navigate('/dashboard');
+  };
   return (
     <header className="flex  items-center justify-between mr-[50px] mb-6">
           <div className="flex space-x-4">
@@ -26,7 +32,7 @@ const Header = () => {
             <button className="px-4 py-2 bg-gray-200 h-[40px]  rounded-lg w-[160px] border flex flex-row items-center justify-center border-k1 text-black font-PB">
             <PiPackageFill className='text-k1 mr-[15px]' style={{fontSize: "20px"}}/> IPVS <ArrowDropDownRoundedIcon className="ml-2 text-[#B01E1D] " style={{fontSize: "2rem"}} />
             </button>
-            <button className="px-4 py-2 bg-gray-200 h-[40px]  rounded-lg w-[160px] flex flex-row items-center border border-k1 font-PB">
+            <button className="px-4 py-2 bg-gray-200 h-[40px]  rounded-lg w-[160px] flex flex-row items-center border border-k1 font-PB" onClick={handleDash}>
             <PiChartPieSliceFill className='text-k1 mr-[5px]' style={{fontSize: "20px"}} />Dashboard   
             </button>
             <button className="px-4 py-2 bg-gray-200 h-[40px]  rounded-lg w-[160px] flex flex-row items-center justify-center border border-k1 font-PB">

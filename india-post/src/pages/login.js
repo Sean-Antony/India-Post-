@@ -34,8 +34,8 @@ function Login() {
     return (
         <div className="flex flex-col lg:flex-row min-h-screen bg-[#F7F7F9]">
             <LeftPanel currentStep={currentStep}/>
-            <div className="flex-1 flex flex-col">
-                <header className="flex items-center justify-between p-4 lg:mx-16 xl:mx-12">
+            <div className="flex-1 flex flex-col ">
+                <header className="flex items-center justify-between p-4 xl:mx-12">
                     <img 
                         src={logo}
                         alt='India Post Logo' 
@@ -55,9 +55,9 @@ function Login() {
                 <div className='flex justify-center'>
                     <div className='h-[2px] w-full max-w-screen-xl bg-gray-200'></div>
                 </div>
-                <div className='flex flex-col items-center justify-center flex-1'>
-                    <div className="w-full lg:w-[5250px] xl:w-[625px] bg-white rounded-lg border p-8 lg:h-[550px] xl:h-[650px] lg:p-10 xl:p-12">
-                        <div className="flex justify-center mb-2 mt-[-10px]">
+                <div className='flex flex-col items-center justify-center 2xl:mt-[8%]'>
+                    <div className="bg-white rounded-lg border p-8 h-[100%] sm:w-[500px] sm:h-[550px] sm:space-y-4 md:w-[600px] md:h-[650px] md:space-y-6 xl:w-[550px] xl:h-[600px] 2xl:space-y-3 xl:space-y-5 xl:p-12 2xl:p-12">
+                        <div className="flex justify-center mb-2 ">
                             <div className="bg-k1 p-1 rounded-md"> 
                                 <PersonRoundedIcon className="text-white" fontSize="large" /> 
                             </div>
@@ -111,6 +111,8 @@ function Login() {
                                     </div>
                                 </div>
                               </div>
+                            </div>
+                        </form>
                                 <div className="text-md text-right">
                                     <a href="#" className="relative font-medium font-PSB text-k1 group">
                                         Forgot password?
@@ -118,20 +120,18 @@ function Login() {
                                     </a>
                                 </div>
                                 <div className='flex justify-center '>
-                                    <div className='h-px w-full bg-gray-200 mb-[50px]'></div>
+                                    <div className='h-px w-full bg-gray-200 '></div>
                                 </div>
                                 <div className='flex justify-end space-x-4'>
-                                    <button type="submit" className="border border-k1 bg-white text-black font-bold py-3 px-5 rounded-md">
+                                    <button type="submit" className="border border-k1 bg-white text-black font-bold py-3 px-5 rounded-md" >
                                         <CreateRoundedIcon className='ml-[-2px] mr-2' />
                                         Register
                                     </button>
-                                    <button type="submit" className="bg-k1 text-white font-bold py-3 px-5 rounded-md">
+                                    <button type="submit" className="bg-k1 text-white font-bold py-3 px-5 rounded-md" onClick={handleSubmit}>
                                         <LoginRoundedIcon className='ml-[-2px] mr-2' />
                                         Login
                                     </button>
                                 </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>

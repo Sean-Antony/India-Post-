@@ -8,19 +8,16 @@ import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
-import { Card, Checkbox } from "@mui/material";
+import { Card } from "@mui/material";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { RiDiscountPercentFill } from "react-icons/ri";
-import { GoArrowUpRight } from "react-icons/go";
 import FiberManualRecordRoundedIcon from '@mui/icons-material/FiberManualRecordRounded';
 import { GoArrowDownLeft } from "react-icons/go";
 import { FaStore } from "react-icons/fa6";
 import Header from "../components/Header.js";
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import { CheckBox } from "@mui/icons-material";
-
 
 const Home = () => {
   return (
