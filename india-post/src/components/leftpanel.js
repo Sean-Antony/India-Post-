@@ -10,75 +10,75 @@ import HelpIcon from "@mui/icons-material/Help";
 
 const LeftPanel = () => {
   return (
-    <div className="h-screen w-1/6 bg-k1 flex ">
-      <div className="flex flex-col">
-        <ul className="space-y-2 mt-[100px] ml-[40px] text-[14px] font-bold">
+    <div className="h-screen w-full sm:w-1/4 lg:w-1/6 bg-k1 flex">
+      <div className="flex flex-col w-full">
+        <ul className="space-y-2 mt-12 sm:mt-[100px] ml-8 sm:ml-[40px] text-sm sm:text-[14px] font-bold">
           <div className="flex items-center">
             <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <HomeRoundedIcon className="mr-[20px]" />
+              <HomeRoundedIcon className="mr-4 sm:mr-[20px]" />
               Home
             </li>
           </div>
           <div className="flex items-center">
             <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <HistoryRoundedIcon className="mr-[20px]" />
+              <HistoryRoundedIcon className="mr-4 sm:mr-[20px]" />
               History
             </li>
           </div>
           <div className="flex items-center">
             <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <PushPinRoundedIcon className="mr-[20px]" />
+              <PushPinRoundedIcon className="mr-4 sm:mr-[20px]" />
               Pending Bags
             </li>
           </div>
           <div className="flex items-center">
             <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <TourRoundedIcon className="mr-[20px]" />
+              <TourRoundedIcon className="mr-4 sm:mr-[20px]" />
               Flag Bags
             </li>
           </div>
           <div className="flex items-center">
             <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <CreditCardIcon className="mr-[20px]" />
+              <CreditCardIcon className="mr-4 sm:mr-[20px]" />
               E-payments
             </li>
           </div>
         </ul>
         <div className="flex justify-center">
-        <div className="flex items-center w-[200px] ml-[20px] mt-[20px] h-px bg-gray-300"></div>
+          <div className="w-full sm:w-[200px] mt-4 sm:mt-[20px] h-px bg-gray-300"></div>
         </div>
         <div>
-          <ul className="space-y-2 mt-[20px] ml-[40px] text-[14px] font-bold ">
+          <ul className="space-y-2 mt-4 sm:mt-[20px] ml-8 sm:ml-[40px] text-sm sm:text-[14px] font-bold">
             <div className="flex items-center">
               <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <DesktopMacIcon className="mr-[20px]" />
+                <DesktopMacIcon className="mr-4 sm:mr-[20px]" />
                 Configuration
               </li>
             </div>
             <div className="flex items-center">
               <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <SettingsIcon className="mr-[20px]" />
+                <SettingsIcon className="mr-4 sm:mr-[20px]" />
                 Settings
               </li>
             </div>
             <div className="flex items-center">
               <span className="block w-px h-10 bg-gray-300 hover:bg-yellow-500 transition-colors duration-300"></span>
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <HelpIcon className="mr-[20px]" />
+                <HelpIcon className="mr-4 sm:mr-[20px]" />
                 Help
               </li>
             </div>
           </ul>
         </div>
-        <div className='flex justify-center'>
-        <div className=" w-[200px] mt-[20px] ml-[20px] h-px bg-gray-300"></div>
+        <div className="flex justify-center">
+          <div className="w-full sm:w-[200px] mt-4 sm:mt-[20px] h-px bg-gray-300"></div>
         </div>
       </div>
     </div>

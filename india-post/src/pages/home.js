@@ -68,7 +68,7 @@ const Home = () => {
                 <div>
                   <h2 className="font-PB mt-[-5px] text-left w-full">Resume</h2>
                   <p className="mt-[5px] text-left w-full font-PSB text-gray-400">
-                    Office ID: <span className="text-black">SL3249843534</span>
+                    Office ID: <span className="text-black">990909090</span>
                   </p>
                 </div>
                 
