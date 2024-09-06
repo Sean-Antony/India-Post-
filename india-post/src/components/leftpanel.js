@@ -12,7 +12,7 @@ const LeftPanel = () => {
   return (
     <div className="fixed top-0 left-0 h-screen w-1/6 bg-k1 flex justify-center items-center">
       <div className="flex flex-col">
-        <ul className="space-y-2   text-[14px] font-bold">
+        <ul className="space-y-2 text-[14px] font-bold">
           <div className="flex">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
               <HomeRoundedIcon className="mr-4 sm:mr-[20px]" />
