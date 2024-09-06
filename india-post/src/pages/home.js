@@ -21,10 +21,10 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
 const Home = () => {
   return (
-    <div className="flex  h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100">
       <LeftPanel />
 
-      <main className="flex-1 p-8">
+      <main className="ml-[16.666%] flex-1 p-8 space-y-6 h-screen overflow-y-auto">
         <Header />
         <div className="flex items-center space-x-4">
           <div className="relative ">
@@ -137,7 +137,7 @@ const Home = () => {
               </div>
               <div className="w-full bg-gray-300 mt-[20px] h-px"></div>
               <div className="grid grid-cols-2 gap-2 mt-[20px] ">
-                <div className="bg-white h-[120px] rounded-md shadow-lg">
+                <div className="bg-white h-[120px] rounded-md ">
                   {" "}
                   <div className="flex flex-row mt-[12px] ml-[10px] ">
                     <span className="w-[40px] h-[40px] rounded-md   bg-purple-400 flex items-center justify-center">
