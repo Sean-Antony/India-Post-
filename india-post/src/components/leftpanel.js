@@ -15,31 +15,31 @@ const LeftPanel = () => {
         <ul className="space-y-2   text-[14px] font-bold">
           <div className="flex">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <HomeRoundedIcon className="mr-[20px]" />
+              <HomeRoundedIcon className="mr-4 sm:mr-[20px]" />
               Home
             </li>
           </div>
           <div className="flex ">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <HistoryRoundedIcon className="mr-[20px]" />
+              <HistoryRoundedIcon className="mr-4 sm:mr-[20px]" />
               History
             </li>
           </div>
           <div className="flex">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <PushPinRoundedIcon className="mr-[20px]" />
+              <PushPinRoundedIcon className="mr-4 sm:mr-[20px]" />
               Pending Bags
             </li>
           </div>
           <div className="flex ">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <TourRoundedIcon className="mr-[20px]" />
+              <TourRoundedIcon className="mr-4 sm:mr-[20px]" />
               Flag Bags
             </li>
           </div>
           <div className="flex ">
             <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-              <CreditCardIcon className="mr-[20px]" />
+              <CreditCardIcon className="mr-4 sm:mr-[20px]" />
               E-payments
             </li>
           </div>
@@ -51,19 +51,19 @@ const LeftPanel = () => {
           <ul className="space-y-2 mt-[20px] text-[14px] font-bold ">
             <div className="flex">
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <DesktopMacIcon className="mr-[20px]" />
+                <DesktopMacIcon className="mr-4 sm:mr-[20px]" />
                 Configuration
               </li>
             </div>
             <div className="flex">
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <SettingsIcon className="mr-[20px]" />
+                <SettingsIcon className="mr-4 sm:mr-[20px]" />
                 Settings
               </li>
             </div>
             <div className="flex">
               <li className="p-2 rounded-[20px] hover:text-[#FFF600] text-white text-center flex items-center ml-2">
-                <HelpIcon className="mr-[20px]" />
+                <HelpIcon className="mr-4 sm:mr-[20px]" />
                 Help
               </li>
             </div>

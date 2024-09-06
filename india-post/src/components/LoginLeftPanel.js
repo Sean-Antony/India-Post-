@@ -23,7 +23,7 @@ function LeftPanel({currentStep}) {
     },
   ];
   return (
-    <div className="flex flex-col h-screen bg-k1 text-white p-4 md:p-8 lg:w-1/4 lg:min-w-[300px] hidden lg:block">
+    <div className=" flex-col h-screen bg-k1 text-white p-4 md:p-8 lg:w-1/4 lg:min-w-[300px] hidden lg:block">
       <div className="flex flex-col flex-grow items-center justify-between">
         <div className="flex flex-col items-center mb-8">
           <img src="logo.png" alt="India Post Logo" className="w-20 mb-4" />
@@ -51,7 +51,7 @@ function LeftPanel({currentStep}) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col align-left mb-2 xl:mt-[100px] 2xl:mt-[250px]">
+        <div className="flex flex-col align-left mb-2 xl:mt-[100px]  2xl:mt-[250px]">
           <p className="text-sm md:text-sm font-PM opacity-70 mb-2">New Updates available! v_4.9.3</p>
           <h3 className="text-sm md:text-sm py-1 font-PSB">Update Now</h3>
         </div>
