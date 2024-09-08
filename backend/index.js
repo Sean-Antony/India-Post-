@@ -1,63 +1,38 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost:27017/', {
-    dbName: 'IndiaPost',
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}, err => err ? console.log(err) : 
-    console.log('Connected to yourDB-name database'));
-
-const UserSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    userID: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
-        type: Date,
-        default: Date.now,
-    },
-});
-
-const User = mongoose.model('users', UserSchema);
-User.createIndexes();
-
-// For backend and express
 const express = require('express');
-const app = express();
 const cors = require("cors");
-console.log("App listen at port 5000");
+const connectDB = require("C:/coding/India Post/backend/connect.js"); // Import the connectDB function
+require('dotenv').config();
+const UserModel = require("C:/coding/India Post/backend/models/User.js"); // Import the UserModel
+
+// Express setup
+const app = express();
 app.use(express.json());
 app.use(cors());
-app.get("/", (req, resp) => {
 
-    resp.send("App is Working");
-    // You can check backend is working or not by 
-    // entering http://loacalhost:5000
-    
-    // If you see App is working means
-    // backend working properly
-});
-
-app.post("/register", async (req, resp) => {
+// Connect to MongoDB and start the server
+const startServer = async () => {
     try {
-        const user = new User(req.body);
-        let result = await user.save();
-        result = result.toObject();
-        if (result) {
-            delete result.password;
-            resp.send(req.body);
-            console.log(result);
-        } else {
-            console.log("User already register");
-        }
-
-    } catch (e) {
-        resp.send("Something Went Wrong");
+        await connectDB(); // Call the function to connect to MongoDB
+        app.listen(3000, () => { // Ensure this matches the port you're using
+            console.log('Connected to IndiaPost database and server running on port 3000');
+        });
+    } catch (err) {
+        console.error('Failed to connect to MongoDB', err);
+        process.exit(1); // Exit process with failure
     }
+};
+
+// Call the function to start the server
+startServer();
+
+// Define your routes
+app.get("/", (req, res) => {
+    res.send("App is Working");
 });
-app.listen(5000);
+
+app.post('/register',  (req, res) => {
+ UserModel.create(req.body)
+ .then(users => res.json(users))
+ .catch(err => res.json(err))
+});
