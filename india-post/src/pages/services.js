@@ -41,8 +41,8 @@ function Login() {
         <div className="flex justify-center">
           <div className="h-[2px] w-full max-w-screen-xl bg-gray-200"></div>
         </div>
-        <div className="flex flex-col items-center justify-center flex-grow px-4 lg:px-0">
-          <div className="bg-white rounded-lg border p-8 w-full max-w-sm sm:max-w-md md:max-w-lg xl:max-w-md">
+        <div className="flex flex-col items-center justify-center flex-grow px-4 lg:px-0  lg:mt-20">
+          <div className="bg-white rounded-lg border p-6 sm:p-8 lg:p-10 w-full max-w-md sm:max-w-lg xl:max-w-lg">
             <div className="flex justify-center mb-4">
               <div className="bg-k1 p-2 rounded-md">
                 <StoreRoundedIcon className="text-white" fontSize="large" />

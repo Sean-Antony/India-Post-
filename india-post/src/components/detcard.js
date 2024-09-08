@@ -6,12 +6,12 @@ const Card = ({ icon, title, amount, monthAmount, percentage, isPositive }) => {
     <div className="flex flex-col bg-white p-4 rounded-md w-full h-full">
       <div className="flex items-center">
 
-        <div className={`p-2 rounded-md bg-${icon.bgColor} text-3xl`}>
+        <div className={`p-2 rounded-md bg-${icon.bgColor} text-lg 2xl:text-3xl`}>
             {icon.component}
         </div>
         <div className="ml-3">
-          <p className="text-lg font-PSB">{amount}</p>
-          <p className="text-gray-500 font-PSB ">{title}</p>
+          <p className="text-sm 2xl:text-lg font-PSB">{amount}</p>
+          <p className="text-sm 2xl:text-md text-gray-500 font-PSB ">{title}</p>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const Card = ({ icon, title, amount, monthAmount, percentage, isPositive }) => {
           This month: <span className="text-k1 font-PSB">{monthAmount}</span>
         </p>
 
-        <div className="flex items-center min-h-[24px]">
+        <div className="flex items-center2xl:min-h-[24px]">
           {percentage !== undefined ? (
             <>
               {isPositive ? (
@@ -38,9 +38,9 @@ const Card = ({ icon, title, amount, monthAmount, percentage, isPositive }) => {
         </div>
       </div>
 
-      <button className="mt-5">
-        <div className='w-full h-px bg-gray-200 mb-4'></div>
-        <div className="text-sm font-PSB text-gray-600 flex items-center justify-between w-full">
+      <button className="mt-1 2xl:mt-5">
+        <div className='w-full h-px bg-gray-200 mb-1 2xl:mb-4'></div>
+        <div className="text-sm font-PSB text-gray-600 flex items-center justify-between w-full mb-[-5px] 2xl:mb-0">
           See Details
           <ArrowForward />
         </div>

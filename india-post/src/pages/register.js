@@ -11,28 +11,40 @@ import logo from "../assets/logo.png";
 import axios from "axios"
 
 const Register = () => {
-    const [name, setName] = useState("");
-    const [userID, setID] = useState("");
-    const [password, setPass] = useState("");
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        let result = await fetch(
-        'http://localhost:5000/register', {
-            method: "post",
-            body: JSON.stringify({ name, userID, password }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        result = await result.json();
-        console.warn(result);
-        if (result) {
-            alert("Data saved succesfully");
-            setPass("");
-            setID("");
-            setName("");
-        }
+  const [formData, setFormData] = useState({
+    name: "",
+    userid: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (!formData.name || !formData.userid || !formData.password) {
+        alert('All fields are required.');
+        return;
+      }
+  
+      const res = await axios.post('http://localhost:5000/register', formData);
+      console.log(res.data);
+      // Redirect to login page after successful registration
+      navigate('/');
+    } catch (err) {
+      console.error(err);
+      // Optionally, show an error message to the user
+      alert("Error registering user. Please try again.");
     }
+  };
 
     const [currentStep, setCurrentStep] = useState(0);
 
@@ -99,8 +111,8 @@ const Register = () => {
                       type="text"
                       name="name"
                       placeholder="Name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      value={formData.name}
+                      onChange={handleChange}
                       
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
@@ -108,7 +120,7 @@ const Register = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="userID"
+                    htmlFor="userid"
                     className="block text-lg font-PSB text-gray-700 mb-2"
                   >
                     India Post Office ID
@@ -119,10 +131,10 @@ const Register = () => {
                     </div>
                     <input
                       type="text"
-                      name="userID"
+                      name="userid"
                       placeholder="Office ID"
-                      value={userID}
-                      onChange={(e) => setID(e.target.value)}
+                      value={formData.userid}
+                      onChange={handleChange}
                       
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
@@ -143,8 +155,8 @@ const Register = () => {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPass(e.target.value)}
+                      value={formData.password}
+                      onChange={handleChange}
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
                   </div>
@@ -157,7 +169,6 @@ const Register = () => {
                 <button
                   type="submit"
                   className="bg-k1 text-white font-bold py-3 w-full mt-2 px-5 rounded-md"
-                  onSubmit={handleSubmit}
                 >
                   <CreateRoundedIcon className="ml-[-2px] mr-2" />
                   Register

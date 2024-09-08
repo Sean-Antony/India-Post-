@@ -13,32 +13,34 @@ import axios from "axios"
 
 function Login() {
   const [formData, setFormData] = useState({
-    userID: "",
+    userid: "",
     password: "",
   });
 
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value, // Dynamically set form fields based on name
+      [name]: value,
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('/login', formData);
-      if (res.status === 200) {
-        navigate('/services'); // Redirect to /services on successful login
-      }
-    } catch (error) {
-      console.error('Login failed', error);
-    }
-  };
+  const login = async (e) => {
+    e.preventDefault(); 
 
+    try {
+        const res = await axios.post('http://localhost:5000/api/auth/login', {
+            userid: formData.userid, 
+            password: formData.password, 
+        });
+        console.log(res.data);
+        navigate('/services');
+    } catch (err) {
+        console.error(err);
+    }
+};
   const [currentStep, setCurrentStep] = useState(0);
 
   return (
@@ -87,7 +89,7 @@ function Login() {
             <div className="flex justify-center mt-5 mb-8">
               <div className="h-px w-full bg-gray-200"></div>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form >
               <div className="space-y-6">
                 <div>
                   <label
@@ -102,9 +104,9 @@ function Login() {
                     </div>
                     <input
                       type="text"
-                      name="userID"
+                      name="userid"
                       placeholder="Office ID"
-                      value={formData.userID}
+                      value={formData.userid}
                       onChange={handleChange}
                       
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
@@ -155,9 +157,9 @@ function Login() {
                   Register
                 </button>
                 <button
-                  type="submit"
+                  type="button"
                   className="bg-k1 text-white font-bold py-3 w-full mt-2 px-5 rounded-md"
-                  onSubmit={handleSubmit}
+                  onClick={navigate("/services")}
                 >
                   <LoginRoundedIcon className="ml-[-2px] mr-2" />
                   Login
