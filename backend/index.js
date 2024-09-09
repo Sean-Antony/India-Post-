@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const cors = require("cors");
-const connectDB = require("C:/coding/India Post/backend/connect.js"); // Import the connectDB function
+const connectDB = require("./connect"); // Import the connectDB function
 require('dotenv').config();
 const UserModel = require("C:/coding/India Post/backend/models/User.js"); // Import the UserModel
 const bodyParser = require('body-parser');

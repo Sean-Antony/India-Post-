@@ -21,11 +21,11 @@ function Login() {
     <div className="flex flex-col lg:flex-row min-h-screen bg-[#F7F7F9] overflow-hidden">
       <LeftPanel currentStep={currentStep} />
       <div className="flex-1 flex flex-col h-full">
-        <header className="flex items-center justify-between p-4 md:px-8 xl:mx-12">
+        <header className="flex items-center justify-between py-5 px-14">
           <img 
             src={logo}
             alt="India Post Logo" 
-            className="h-16 w-auto md:h-20 xl:h-24"
+            className="h-[80px] 2xl:h-[100px]"
           />
           <div className="flex space-x-4">
             <button type="button" className="border border-k1 bg-[#F7F7F9] text-black font-bold py-2 px-4 rounded-md flex items-center">
@@ -41,10 +41,10 @@ function Login() {
         <div className="flex justify-center">
           <div className="h-[2px] w-full max-w-screen-xl bg-gray-200"></div>
         </div>
-        <div className="flex flex-col items-center justify-center flex-grow px-4 lg:px-0">
-          <div className="bg-white rounded-lg border p-8 w-full max-w-sm sm:max-w-md md:max-w-lg xl:max-w-md">
+        <div className="flex flex-col items-center justify-center flex-grow px-4 mt-8 2xl:mt-20">
+          <div className="bg-white rounded-lg border p-6 sm:p-8 lg:p-10 w-full max-w-lg">
             <div className="flex justify-center mb-4">
-              <div className="bg-k1 p-2 rounded-md">
+              <div className="bg-k1 p-1 2xl:p-2 rounded-md">
                 <StoreRoundedIcon className="text-white" fontSize="large" />
               </div>
             </div>
@@ -60,12 +60,12 @@ function Login() {
               <div className="h-px w-full bg-gray-200"></div>
             </div>
             <div className="relative mb-6">
-              <label htmlFor="postal-network" className="block text-sm md:text-lg mb-2 font-PSB">Select your postal network</label>
+              <label htmlFor="postal-network" className="block text-md 2xl:text-lg mb-2 font-PSB">Select your postal network</label>
               <div className="relative">
                 <StoreRoundedIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
                 <select
                   id="postal-network"
-                  className="w-full border rounded bg-[#F7F7F9] p-4 pl-10 appearance-none focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
+                  className="w-full border rounded bg-[#F7F7F9] py-2 2xl:py-3 pl-10 appearance-none focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
                   defaultValue="Sorting Hub/ Collection Center"
                 >
                   <option>Sorting Hub/ Collection Center</option>
@@ -80,12 +80,12 @@ function Login() {
               </div>
             </div>
             <div className="relative mb-6">
-              <label htmlFor="location" className="block text-sm md:text-lg mb-2 font-PSB">Location</label>
+              <label htmlFor="location" className="block text-md 2xl:text-lg mb-2 font-PSB">Location</label>
               <div className="relative">
                 <LocationOnRoundedIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
                 <select
                   id="location"
-                  className="w-full border rounded bg-[#F7F7F9] p-4 pl-10 appearance-none focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
+                  className="w-full border rounded bg-[#F7F7F9] py-2 2xl:py-3 pl-10 appearance-none focus:outline-none focus:ring-k1 focus:border-k1 focus:z-10"
                   defaultValue="Ahmedabad NSH"
                 >
                   <option>Ahmedabad NSH</option>

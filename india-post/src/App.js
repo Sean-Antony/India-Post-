@@ -5,6 +5,7 @@ import Features from './pages/features';
 import Home from './pages/home';
 import Dashboard from './pages/dashboard';
 import Register from './pages/register';
+import Messages from './pages/messages';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/features" element={<Features />} />
       <Route path="/home" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/messages" element={<Messages />} />
     </Routes>
   )
 }
