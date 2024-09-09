@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Services from './pages/services';
 import Features from './pages/features';
@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Dashboard from './pages/dashboard';
 import Register from './pages/register';
 import Messages from './pages/messages';
+
 
 function App() {
   return(

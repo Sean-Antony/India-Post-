@@ -12,35 +12,19 @@ import logo from "../assets/logo.png";
 import axios from "axios"
 
 function Login() {
-  const [formData, setFormData] = useState({
-    userid: "",
-    password: "",
-  });
+  const [userID, setID] = useState("");
+  const [password, setPass] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); 
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    axios.post('http://localhost:3000/',{ userID, password})
+    .then(result=> console.log(result))
+    .catch(err=> console.log(err))
+  }
 
-  const login = async (e) => {
-    e.preventDefault(); 
-
-    try {
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
-            userid: formData.userid, 
-            password: formData.password, 
-        });
-        console.log(res.data);
-        navigate('/services');
-    } catch (err) {
-        console.error(err);
-    }
-};
   const [currentStep, setCurrentStep] = useState(0);
 
   return (
@@ -106,8 +90,8 @@ function Login() {
                       type="text"
                       name="userid"
                       placeholder="Office ID"
-                      value={formData.userid}
-                      onChange={handleChange}
+                      value={userID}
+                      onChange={(e) => setID(e.target.value)}
                       
                       className="border rounded-md pl-10 py-2 2xl:py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
@@ -128,9 +112,9 @@ function Login() {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      value={formData.password}
-                      onChange={handleChange}
-                      className="border rounded-md pl-10 py-2 2xl:py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
+                      value={password}
+                      onChange={(e) => setPass(e.target.value)}
+                      className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
                   </div>
                 </div>

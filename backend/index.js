@@ -3,12 +3,15 @@ const express = require('express');
 const cors = require("cors");
 const connectDB = require("./connect"); // Import the connectDB function
 require('dotenv').config();
-const UserModel = require("./models/user") // Import the UserModel
+const UserModel = require("C:/coding/India Post/backend/models/User.js"); // Import the UserModel
+const bodyParser = require('body-parser');
+const AuthRouter =  require('./Routes/AuthRouter.js')
 
 // Express setup
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 // Connect to MongoDB and start the server
 const startServer = async () => {
@@ -23,6 +26,8 @@ const startServer = async () => {
     }
 };
 
+app.use('/auth', AuthRouter);
+
 // Call the function to start the server
 startServer();
 
@@ -31,8 +36,4 @@ app.get("/", (req, res) => {
     res.send("App is Working");
 });
 
-app.post('/register',  (req, res) => {
- UserModel.create(req.body)
- .then(users => res.json(users))
- .catch(err => res.json(err))
-});
+
