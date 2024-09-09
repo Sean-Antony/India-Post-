@@ -8,10 +8,7 @@ const UserSchema = new mongoose.Schema({
     },
     userID: {
         type: String,
-        required: true,
-        default: function() {
-            return uuidv4();
-        },
+        
         unique: true,
     },
     password: {

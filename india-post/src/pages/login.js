@@ -12,32 +12,18 @@ import logo from "../assets/logo.png";
 import axios from "axios"
 
 function Login() {
-  const [formData, setFormData] = useState({
-    userID: "",
-    password: "",
-  });
+  const [userID, setID] = useState("");
+  const [password, setPass] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // For navigation
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value, // Dynamically set form fields based on name
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('/login', formData);
-      if (res.status === 200) {
-        navigate('/services'); // Redirect to /services on successful login
-      }
-    } catch (error) {
-      console.error('Login failed', error);
-    }
-  };
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    axios.post('http://localhost:3000/',{ userID, password})
+    .then(result=> console.log(result))
+    .catch(err=> console.log(err))
+  }
 
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -104,8 +90,8 @@ function Login() {
                       type="text"
                       name="userID"
                       placeholder="Office ID"
-                      value={formData.userID}
-                      onChange={handleChange}
+                      value={userID}
+                      onChange={(e) => setID(e.target.value)}
                       
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
@@ -126,8 +112,8 @@ function Login() {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      value={formData.password}
-                      onChange={handleChange}
+                      value={password}
+                      onChange={(e) => setPass(e.target.value)}
                       className="border rounded-md pl-10 py-3 w-full bg-[#F7F7F9] focus:outline-none focus:ring-k1 focus:border-k1 text-gray-600"
                     />
                   </div>
